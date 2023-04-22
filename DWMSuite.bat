@@ -263,14 +263,14 @@ exit
 
 :dcl
 takeown /f %systemroot%\Windows.UI.Logon.dll
-ren %systemroot%\Windows.UI.Logon.dll %systemroot%\Windows.UI.Logon.dll.bak
+ren %systemroot%\System32\Windows.UI.Logon.dll.bak Windows.UI.Logon.dll
 cls Done
 pause
 exit
 
 :ecl
-ren %systemroot%\Windows.UI.Logon.dll.bak %systemroot%\Windows.UI.Logon.dll
-cls Done
+ren %systemroot%\System32\Windows.UI.Logon.dll Windows.UI.Logon.dll.bak
+Done
 pause
 exit
 
