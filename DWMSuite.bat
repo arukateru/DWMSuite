@@ -62,7 +62,7 @@ echo.	Press [9] to enable W7 Basic windowmetrics
 echo.	Press [L] to enable W10 default windowmetrics
 echo.	Press [X] to quit
 echo.
-echo.=============================================================
+echo.============================================================
 choice /C:123456789LX /N /M "Selection: "
 if errorlevel L goto :10metrics
 if errorlevel 9 goto :basicmetrics
