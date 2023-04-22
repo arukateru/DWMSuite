@@ -32,23 +32,27 @@ if '%errorlevel%' NEQ '0' (
 :-------------------------------------- 
 
 :welcome
-echo.==================================================================================
+echo.===========================================================
 echo.		            DWMSuite by Alcatel :D
-echo.==================================================================================
+echo.===========================================================
 echo.
-echo.	In the case of a black screen upon reboot you should recover DWM from WinRE.
-echo.	You can't use this Batch file in WinRE cuz it doesn't have the "choice" command
-echo.	for some reason lmao, just open it in Notepad and copy the section you need
-echo.	such as :restore and save as and you will also have to find and replace in 
-echo.	Notepad (Ctrl-H) % systemroot % (no spaces) with your drive letter cuz in 
+echo.	In the case of a black screen upon reboot you should
+echo.   recover DWM from WinRE. You can't use this Batch file in
+echo.   WinRE cuz it doesn't have the "choice" command for some
+echo.	reason lmao, just open it in Notepad and copy the section
+echo.   you need such as :restore and save as and you will also
+echo.   have to find and replace in Notepad (Ctrl-H)
+echo.   % systemroot % (no spaces) with your drive letter cuz in 
 echo.	WinRE systemroot would be the ramdisk system32
 echo.	
-echo.	If your language is not American English make sure to find and replace
-echo.	en-US with whatever your language code is in this script
+echo.	If your language is not American English make sure to
+echo.	find and replace en-US with whatever your language code
+echo.   is in this script
 echo.	
+echo.	PLEASE MAKE A RESTORE POINT FIRST IN CASE OF ERRORS!
 echo.	Press [1] to backup DWM files
 echo.	Press [2] to restore DWM files
-echo.	Press [3] to swap DWM files for another version
+echo.	Press [3] to import files
 echo.	Press [4] to disable DWM
 echo.	Press [5] to enable DWM
 echo.	Press [6] to enable console logon (Win10 logon screen is all black w/o DWM)
