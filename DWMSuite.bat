@@ -40,7 +40,7 @@ echo.	In the case of a black screen upon reboot you should recover DWM from WinR
 echo.	You can't use this Batch file in WinRE cuz it doesn't have the "choice" command
 echo.	for some reason lmao, just open it in Notepad and copy the section you need
 echo.	such as :restore and save as and you will also have to find and replace in 
-echo.	Notepad (Ctrl-H) % systemroot %  (no spaces) with your drive letter cuz in 
+echo.	Notepad (Ctrl-H) % systemroot % (no spaces) with your drive letter cuz in 
 echo.	WinRE systemroot would be the ramdisk system32
 echo.	
 echo.	If your language is not American English make sure to find and replace
@@ -72,29 +72,61 @@ if errorlevel 1 goto :backup
 echo This will bootloop the PC until you fix it in WinRE if Windows doesn't like your DWM. IMPORTANT NOTE: In order to copy the new DWM version, you must put the files in a System32 folder within this directory. This folder can have a en-US subfolder with the MUIs.
 /pause
 takeown /f %systemroot%\System32\dwm.exe
+icacls %systemroot%\System32\dwm.exe /grant Administrators:(F)
 takeown /f %systemroot%\System32\dwmapi.dll
+icacls %systemroot%\System32\dwmapi.dll /grant Administrators:(F)
 takeown /f %systemroot%\System32\dwmcore.dll
+icacls %systemroot%\System32\dwmcore.dll /grant Administrators:(F)
 takeown /f %systemroot%\System32\dwminit.dll
+icacls %systemroot%\System32\dwminit.dll /grant Administrators:(F)
 takeown /f %systemroot%\System32\dwmredir.dll
+icacls %systemroot%\System32\dwmredir.dll /grant Administrators:(F)
 takeown /f %systemroot%\System32\uDWM.dll
-takeown /f %systemroot%\System32\en-US\dwm.exe.mui 
+icacls %systemroot%\System32\uDWM.dll /grant Administrators:(F)
+takeown /f %systemroot%\System32\DWMGhost.dll
+icacls %systemroot%\System32\DWMGhost.dll /grant Administrators:(F)
+takeown /f %systemroot%\System32\en-US\dwm.exe.mui
+icacls %systemroot%\System32\en-US\dwm.exe.mui /grant Administrators:(F)
 takeown /f %systemroot%\System32\en-US\dwmapi.dll.mui
+icacls %systemroot%\System32\en-US\dwmapi.dll.mui /grant Administrators:(F)
 takeown /f %systemroot%\System32\en-US\dwmcore.dll.mui
+icacls %systemroot%\System32\en-US\dwmcore.dll.mui /grant Administrators:(F)
 takeown /f %systemroot%\System32\en-US\dwminit.dll.mui
+icacls %systemroot%\System32\en-US\dwminit.dll.mui /grant Administrators:(F)
 takeown /f %systemroot%\System32\en-US\dwmredir.dll.mui
+icacls %systemroot%\System32\en-US\dwmredir.dll.mui /grant Administrators:(F)
 takeown /f %systemroot%\System32\en-US\uDWM.dll.mui
+icacls %systemroot%\System32\en-US\uDWM.dll.mui /grant Administrators:(F)
+takeown /f %systemroot%\System32\en-US\DWMGhost.dll.mui
+icacls %systemroot%\System32\en-US\DWMGhost.dll.mui /grant Administrators:(F)
 takeown /f %systemroot%\System32\en-GB\dwm.exe.mui
+icacls %systemroot%\System32\en-GB\dwm.exe.mui /grant Administrators:(F)
 takeown /f %systemroot%\System32\en-GB\dwmapi.dll.mui
+icacls %systemroot%\System32\en-GB\dwmapi.dll.mui /grant Administrators:(F)
 takeown /f %systemroot%\System32\en-GB\dwmcore.dll.mui
+icacls %systemroot%\System32\en-GB\dwmcore.dll.mui /grant Administrators:(F)
 takeown /f %systemroot%\System32\en-GB\dwminit.dll.mui
+icacls %systemroot%\System32\en-GB\dwminit.dll.mui /grant Administrators:(F)
 takeown /f %systemroot%\System32\en-GB\dwmredir.dll.mui
+icacls %systemroot%\System32\en-GB\dwmredit.dll.mui /grant Administrators:(F)
 takeown /f %systemroot%\System32\en-GB\uDWM.dll.mui
+icacls %systemroot%\System32\en-GB\uDWM.dll.mui /grant Administrators:(F)
+takeown /f %systemroot%\System32\en-GB\DWMGhost.dll.mui
+icacls %systemroot%\System32\en-GB\DWMGhost.dll.mui /grant Administrators:(F)
 takeown /f "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\dwm.exe.mui"
+icacls "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\dwm.exe.mui" /grant Administrators:(F)
 takeown /f "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\dwmapi.dll.mui"
+icacls "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\dwmapi.dll.mui" /grant Administrators:(F)
 takeown /f "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\dwmcore.dll.mui"
+icacls "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\dwmcore.dll.mui" /grant Administrators:(F)
 takeown /f "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\dwminit.dll.mui"
+icacls "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\dwminit.dll.mui" /grant Administrators:(F)
 takeown /f "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\dwmredir.dll.mui"
+icacls "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\dwmredir.dll.mui" /grant Administrators:(F)
 takeown /f "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\uDWM.dll.mui"
+icacls "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\uDWM.dll.mui" /grant Administrators:(F)
+takeown /f "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\DWMGhost.dll.mui"
+icacls "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US\DWMGhost.dll.mui" /grant Administrators:(F)
 mkdir %systemroot%\System32\dwmbackup
 move %systemroot%\System32\dwm.exe %systemroot%\System32\dwmbackup
 move %systemroot%\System32\dwmapi.dll %systemroot%\System32\dwmbackup
@@ -247,7 +279,7 @@ copy %systemroot%\System32\dwmbackup\en-GB\dwmcore.dll.mui %systemroot%\System32
 copy %systemroot%\System32\dwmbackup\en-GB\dwminit.dll.mui %systemroot%\System32\en-GB -y
 copy %systemroot%\System32\dwmbackup\en-GB\dwmredir.dll.mui %systemroot%\System32\en-GB -y
 copy %systemroot%\System32\dwmbackup\en-GB\uDWM.dll.mui %systemroot%\System32\en-GB -y
-copy %systemroot%\System32\dwmbackup\en-GB\DWMGhost.dll.mui %systemroot%\System32\en-GB  -y
+copy %systemroot%\System32\dwmbackup\en-GB\DWMGhost.dll.mui %systemroot%\System32\en-GB -y
 copy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwm.exe.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" -y
 copy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwmapi.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" -y
 copy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwmcore.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" -y
