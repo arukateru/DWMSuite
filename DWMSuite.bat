@@ -55,14 +55,18 @@ echo.	Press [2] to restore DWM files
 echo.	Press [3] to import files
 echo.	Press [4] to disable DWM
 echo.	Press [5] to enable DWM
-echo.	Press [6] to enable console logon (Win10 logon screen is all black w/o DWM)
-echo.	Press [7] to disable console logon
-echo.	Press [8] for information
+echo.	Press [6] to enable console logon screen
+echo.	Press [7] to enable UWP logon screen
+echo.	Press [8] to enable W7 Aero windowmetrics
+echo.	Press [9] to enable W7 Basic windowmetrics
+echo.	Press [L] to enable W10 default windowmetrics
 echo.	Press [X] to quit
 echo.
 echo.==================================================================================
-choice /C:12345678X /N /M "Selection: "
-if errorlevel 8 goto :help
+choice /C:123456789LX /N /M "Selection: "
+if errorlevel L goto :10metrics
+if errorlevel 9 goto :basicmetrics
+if errorlevel 8 goto :aerometrics
 if errorlevel 7 goto :dcl
 if errorlevel 6 goto :ecl
 if errorlevel 5 goto :enable
@@ -310,32 +314,20 @@ Done
 pause
 exit
 
-:help
-cls
-echo.==================================================================================
-echo.		            DWMSuite by Alcatel :D
-echo.==================================================================================
-echo.
-echo. hi
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.==================================================================================
+:basicmetrics
+reg add HKCU\Control Panel\Desktop\WindowMetrics /v CaptionHeight /t REG_SZ /d -315
+echo It will take effect after logging on again
+pause
+exit
+
+:aerometrics
+reg add HKCU\Control Panel\Desktop\WindowMetrics /v CaptionHeight /t REG_SZ /d -285
+echo It will take effect after logging on again
+pause
+exit
+
+:10metrics
+reg add HKCU\Control Panel\Desktop\WindowMetrics /v CaptionHeight /t REG_SZ /d -330
+echo It will take effect after logging on again
 pause
 exit
