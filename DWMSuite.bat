@@ -305,13 +305,16 @@ exit
 takeown /f %systemroot%\System32\Windows.UI.Logon.dll
 icacls %systemroot%\System32\Windows.UI.Logon.dll /grant Administrators:(F)
 ren %systemroot%\System32\Windows.UI.Logon.dll.bak Windows.UI.Logon.dll
-cls Done
+cls
+echo Done
 pause
 exit
 
 :ecl
+takeown /f %systemroot%\System32\Windows.UI.Logon.dll
+icacls %systemroot%\System32\Windows.UI.Logon.dll /grant Administrators:(F)
 ren %systemroot%\System32\Windows.UI.Logon.dll Windows.UI.Logon.dll.bak
-Done
+echo Done
 pause
 exit
 
