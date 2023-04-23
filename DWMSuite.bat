@@ -62,7 +62,7 @@ echo.	Press [9] to enable W7 Basic windowmetrics
 echo.	Press [L] to enable W10 default windowmetrics
 echo.	Press [X] to quit
 echo.
-echo.============================================================
+echo.=============================================================
 choice /C:123456789LX /N /M "Selection: "
 if errorlevel L goto :10metrics
 if errorlevel 9 goto :basicmetrics
@@ -267,35 +267,35 @@ pause
 exit
 
 :restore
-copy %systemroot%\System32\dwmbackup\dwm.exe %systemroot%\System32 -y
-copy %systemroot%\System32\dwmbackup\dwmapi.dll %systemroot%\System32 -y
-copy %systemroot%\System32\dwmbackup\dwmcore.dll %systemroot%\System32 -y
-copy %systemroot%\System32\dwmbackup\dwminit.dll %systemroot%\System32 -y
-copy %systemroot%\System32\dwmbackup\dwmredir.dll %systemroot%\System32 -y
-copy %systemroot%\System32\dwmbackup\uDWM.dll %systemroot%\System32 -y
-copy %systemroot%\System32\dwmbackup\DWMGhost.dll %systemroot%\System32 -y
-copy %systemroot%\System32\dwmbackup\en-US\dwm.exe.mui %systemroot%\System32\en-US -y
-copy %systemroot%\System32\dwmbackup\en-US\dwmapi.dll.mui %systemroot%\System32\en-US -y
-copy %systemroot%\System32\dwmbackup\en-US\dwmcore.dll.mui %systemroot%\System32\en-US -y
-copy %systemroot%\System32\dwmbackup\en-US\dwminit.dll.mui %systemroot%\System32\en-US -y
-copy %systemroot%\System32\dwmbackup\en-US\dwmredir.dll.mui %systemroot%\System32\en-US -y
-copy %systemroot%\System32\dwmbackup\en-US\uDWM.dll.mui %systemroot%\System32\en-US -y
-copy %systemroot%\System32\dwmbackup\en-US\DWMGhost.dll.mui %systemroot%\System32\en-US -y
-copy %systemroot%\System32\dwmbackup\en-GB\dwm.exe.mui %systemroot%\System32\en-GB -y
-copy %systemroot%\System32\dwmbackup\en-GB\dwmapi.dll.mui %systemroot%\System32\en-GB -y
-copy %systemroot%\System32\dwmbackup\en-GB\dwmcore.dll.mui %systemroot%\System32\en-GB -y
-copy %systemroot%\System32\dwmbackup\en-GB\dwminit.dll.mui %systemroot%\System32\en-GB -y
-copy %systemroot%\System32\dwmbackup\en-GB\dwmredir.dll.mui %systemroot%\System32\en-GB -y
-copy %systemroot%\System32\dwmbackup\en-GB\uDWM.dll.mui %systemroot%\System32\en-GB -y
-copy %systemroot%\System32\dwmbackup\en-GB\DWMGhost.dll.mui %systemroot%\System32\en-GB -y
-copy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwm.exe.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" -y
-copy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwmapi.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" -y
-copy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwmcore.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" -y
-copy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwminit.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" -y
-copy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwminit.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" -y
-copy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwmredir.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" -y
-copy %systemroot%\System32\dwmbackup\en-US-languagepacks\uDWM.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" -y
-copy %systemroot%\System32\dwmbackup\en-US-languagepacks\DWMGhost.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" -y
+xcopy %systemroot%\System32\dwmbackup\dwm.exe %systemroot%\System32 /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\dwmapi.dll %systemroot%\System32 /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\dwmcore.dll %systemroot%\System32 /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\dwminit.dll %systemroot%\System32 /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\dwmredir.dll %systemroot%\System32 /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\uDWM.dll %systemroot%\System32 /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\DWMGhost.dll %systemroot%\System32 /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US\dwm.exe.mui %systemroot%\System32\en-US /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US\dwmapi.dll.mui %systemroot%\System32\en-US /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US\dwmcore.dll.mui %systemroot%\System32\en-US /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US\dwminit.dll.mui %systemroot%\System32\en-US /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US\dwmredir.dll.mui %systemroot%\System32\en-US /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US\uDWM.dll.mui %systemroot%\System32\en-US /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US\DWMGhost.dll.mui %systemroot%\System32\en-US /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-GB\dwm.exe.mui %systemroot%\System32\en-GB /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-GB\dwmapi.dll.mui %systemroot%\System32\en-GB /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-GB\dwmcore.dll.mui %systemroot%\System32\en-GB /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-GB\dwminit.dll.mui %systemroot%\System32\en-GB /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-GB\dwmredir.dll.mui %systemroot%\System32\en-GB /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-GB\uDWM.dll.mui %systemroot%\System32\en-GB /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-GB\DWMGhost.dll.mui %systemroot%\System32\en-GB /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwm.exe.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwmapi.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwmcore.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwminit.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwminit.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US-languagepacks\dwmredir.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US-languagepacks\uDWM.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" /i /e /y /f
+xcopy %systemroot%\System32\dwmbackup\en-US-languagepacks\DWMGhost.dll.mui "C:\Program Files\WindowsApps\Microsoft.LanguageExperiencePacken-US_17763.28.29.0_neutral__8wekyb3d8bbwe\Windows\System32\en-US" /i /e /y /f
 cls
 echo Done
 pause
